@@ -72,6 +72,12 @@ form button {
 
 .todo-item {
     padding: 0rem 0.5rem;
+    cursor: pointer;
+}
+
+.todo-item-check {
+    text-decoration: line-through;
+    opacity: 0.5;
 }
 
 .fa-minus-circle {

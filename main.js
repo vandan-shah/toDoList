@@ -25,6 +25,11 @@ function addTodo(event) {
     trashButton.innerHTML = '<i class="fas fa-minus-circle"></i>';
     trashButton.classList.add('trash-btn');
     todoDiv.appendChild(trashButton);
+    // CHECK
+    /*const checkList = document.querySelector('li');
+    checkList.classList.add('todo-item');
+    todoDiv.appendChild(checkList);*/
+
 
     todoList.appendChild(todoDiv);
 
@@ -35,7 +40,12 @@ function addTodo(event) {
     const item = e.target;
 
     if(item.classList[0] === 'trash-btn') {
-        const trash = item.parentElement;
-        trash.remove();
+        const todo = item.parentElement;
+        todo.remove();
+    }
+
+    if(item.classList[0] === 'todo-item') {
+        const todo = item.parentElement;
+        todo.classList.toggle('todo-item-check');
     }
 }
